@@ -18,18 +18,11 @@ class Patient
   end
 
   def doctors
-    self.appointments.select do |doc|
+    self.appointments.collect do |doc|
       doc.doctor
     end 
   end
   
-  
-  
-def songs
-    Song.all.select do |song|
-      song.artist == self 
-   end
-  end 
   
   def genres
     self.songs.collect do |song|
