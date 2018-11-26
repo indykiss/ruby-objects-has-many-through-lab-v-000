@@ -23,11 +23,22 @@ class Patient
     end 
   end
   
-  #def genres
-  #    self.songs.collect do |song|
-   #     song.genre
-  #    end
-  #end
+  
+  
+def songs
+    Song.all.select do |song|
+      song.artist == self 
+   end
+  end 
+  
+  def genres
+    self.songs.collect do |song|
+      song.genre
+    end
+  end
+  
+  
+  
   
   
   def new_appointment(doctor, date)
