@@ -22,18 +22,7 @@ class Patient
       doc.doctor
     end 
   end
-  
-  
-  #def genres
-  #  self.songs.collect do |song|
-  #    song.genre
-  #  end
-  #end
-  
-  
-  
-  
-  
+ 
   def new_appointment(doctor, date)
     Appointment.new(doctor, self, date)
   end
